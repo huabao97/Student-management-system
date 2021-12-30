@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /ems
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #数据源类型
+    driver-class-name: com.mysql.cj.jdbc.Driver   #加载驱动
+    url: jdbc:mysql://127.0.0.1:3306/db?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+mybatis:
+  mapper-locations: classpath:com/tjcu/mapper/*.xml #指定mapper文件所在的位置,其中classpath必须和mapper-locations分开
+  type-aliases-package: com.tjcu.entity
+
